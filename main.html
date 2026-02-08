@@ -56,8 +56,16 @@
     </iframe>
 
 
-    <iframe class="zoomed fv"
+    <iframe name="FV" class="zoomed fv"
         src="https://ris-abfahrtstafel.noncd.db.de/?evaNumbers=8000284&filterTransports=HIGH_SPEED_TRAIN,INTERCITY_TRAIN,INTER_REGIONAL_TRAIN&includeStationGroup=false&timeSpan=180&pages=3">
     </iframe>
 
 </body>
+
+<script>
+window.setInterval("reloadIFrame();", 10800000);
+
+function reloadIFrame() {
+ document.frames["FV"].location.reload();
+}
+</script>
